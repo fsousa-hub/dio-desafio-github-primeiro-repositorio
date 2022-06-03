@@ -1,0 +1,93 @@
+++[ Curso - Introdução ao Git e ao GitHub ]++
+
+## [ Git ]
+Sistema de versionamento de código distribuido.
+Criado por Linus Torvalds criador do linux.
+
+## [ Tecnologias Git/GitHub - Benefícios ]
+
+1 - Controle de Versão
+2 - Armazenamento em nuvem
+3 - Trabalho em grupo
+4 - Melhoria de código
+5 - Reconhecimento
+
+## [ Comandos básicos de navegação no terminal - CLI ]
+
+ + [ Comando---------------	Win-------	Unix-----]
+   : mudar de pasta:		cd		cd
+   : listar pastas:		dir		ls
+   : criar pastas/arquivos	mkdir		mkdir
+   : deletar pastas/arquivos	del/rmdir	rm -rf
+   : limpar a tela terminal	cls		clear
+ 
+## [ Criar arquivos ]
+
+ + [ Comando Unix ]
+
+  Ex: cria o arquivo helo.txt
+  $ echo hello > helo.txt
+
+## [ Conceitos de Tecnologia - SHA1 ] 
+   
+   Algoritmo de Hash Seguro, no qual gera um conjunto de 40 dígitos.
+
+  + [ Comando Unix ]
+
+  Ex1: gerar um sha1, na string "Ola mundo"
+  $ echo "Ola mundo" | openssl sha1
+
+  Ex2: gerar um sha1, no arquivo texto.txt
+  $ openssl sha1 texto.txt
+
+
+## [ Objetos do Git - Tipos básicos ]
+  
+  + BLOBS
+  + TREES
+  + COMMITS
+
+  Nota: utilizam meta dados.
+
+  Ex1: através do git
+  $ echo 'conteudo' | git hash-object --stadin
+
+  Ex2: através do openssl sem meta dados
+  $ echo -e 'conteudo' | openssl sha1
+
+  Ex3: através do openssl com meta dados
+  $ echo -e 'blob 9\0conteudo' | openssl sha1
+
+ Nota: se compararmos os três modos de gerar o sha1 podemos verificar que a primeira, e a segunda chave são diferentes uma da outra.
+
+Já na terceira é igual a primeira pois foi adicionado o meta dados que validou a verificação e trouxe a mesma chava sha1
+
+Nota: os objetos do Git, possue um tipo, um tamanho, meta dados e conteudo. Dependendo do objeto, como no commit irá conter uma mensagem e nome para dar sentido e significado.
+
+## [ Download ]
+
+ + Link: https://git-scm.com/downloads
+
+## [ Site GitHub ]
+
+ + Link: https://github.com/
+
+
+## [ Site Markdown - Dicas ]
+
+ + Link: https://www.markdownguide.org/basic-syntax/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
